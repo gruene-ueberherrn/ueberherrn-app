@@ -1,0 +1,10 @@
+<mvc:View
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	controllerName="gruene.ueberherrn.controller.Home">
+	<ScrollContainer vertical="true" horizontal="false" height="100%" class="sapUiContentPadding">
+		<Image src="./img/europa-denkmal-1.jpg" width="100%"/>
+		<FormattedText id="formattedText" />
+		<Image src="./img/ueberherrn_sprichwort.jpg" width="100%"/>
+	</ScrollContainer>
+</mvc:View>

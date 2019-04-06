@@ -1,0 +1,1 @@
+sap.ui.define(["./BaseController","sap/ui/model/json/JSONModel"],function(e,t){"use strict";return e.extend("gruene.ueberherrn.controller.Hotels",{onInit:function(){this._initModel();this._setHotels()},_initModel:function(){this.setModel(new t([]),"hotels")},_setHotels:function(){this.getOwnerComponent().getHotelsData().then(e=>{this.getModel("hotels").setData(e)})}})});

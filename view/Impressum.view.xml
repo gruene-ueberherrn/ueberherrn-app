@@ -1,0 +1,14 @@
+<mvc:View
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	controllerName="gruene.ueberherrn.controller.Impressum">
+	<ScrollContainer vertical="true" horizontal="false" height="100%" class="sapUiContentPadding">
+		<!-- <Image src="./img/logo_gruene_impressum.png" width="100%" /> -->
+		<VBox>
+			<Title text="{i18n>impressumTitle}" level="H2" titleStyle="H2" />
+			<FormattedText htmlText="{impressum>/impressumText}" />
+			<Title text="{i18n>licenses}" level="H2" titleStyle="H2" />
+			<Text id="textLicense" text="{impressum>/licenseText}" />
+		</VBox>
+	</ScrollContainer>
+</mvc:View>

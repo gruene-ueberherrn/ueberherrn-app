@@ -1,0 +1,45 @@
+/* Adjust the color of the branding bar and the tool header */
+.grueneUeberherrn .sapMShellBrandingBar {
+    background-color: #19a228;
+}
+.grueneUeberherrnToolHeader {
+    background-color: #19a228 !important;
+    border-color: #19a228 !important;
+}
+
+/* Set the color of the title and nav button in the header to full white (better contrast to green) */
+.grueneUeberherrnTitle {
+    font-size: 1.25rem;
+    color: #FFFFFF !important;
+}
+.grueneUeberherrnButtonNav .sapMBtnIcon {
+    color: #FFFFFF !important;
+}
+
+/* Reduce padding in scroll container */
+.grueneUeberherrn .sapMScrollCont.sapUiContentPadding > .sapMScrollContScroll {
+    padding: 0.5rem;
+}
+
+/* Change the height of the map button */
+.grueneUeberherrnButtonMap {
+    height: 4.5rem;
+}
+.grueneUeberherrnButtonMap .sapMBtnInner {
+    height: 4rem;
+}
+.grueneUeberherrnButtonMap .sapMBtnIcon {
+    line-height: 3.875rem;
+}
+
+.grueneUeberherrnHBoxDutyCall {
+    padding-top: 2px;
+}
+
+.grueneUeberherrnIconCall {
+    margin-right: 0.25rem;
+}
+
+.grueneUeberherrnHBoxPhone {
+    margin-top: 0.25rem;
+}

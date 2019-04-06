@@ -1,0 +1,14 @@
+{
+	"authenticationMethod": "none",
+	"welcomeFile": "/index.html",
+	"routes": [
+		{
+			"path": "/data",
+			"target": {
+				"type": "application",
+				"name": "grueneueberherrndata"
+			},
+			"description": "Gruene Ueberherrn Data"
+		}
+	]
+}

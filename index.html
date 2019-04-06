@@ -1,2 +1,30 @@
 <!DOCTYPE html>
-<h1>Hello!</h1>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- PWA manifest -->
+	<link rel="manifest" href="manifest.json">
+
+	<!-- Add to home screen for Safari on iOS -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="&#xDC;berherrn">
+	<link rel="apple-touch-icon" href="img/logo-152x152.png">
+
+	<title>&#xDC;berherrn App</title>
+
+	<!-- Register service worker -->
+	<script src="register-worker.js"></script>
+
+	<script id="sap-ui-bootstrap" src="resources/sap-ui-custom.js" data-sap-ui-libs="sap.m, sap.ui.layout, sap.ui.core, sap.tnt" data-sap-ui-xx-waitfortheme="true" data-sap-ui-xx-supportedlanguages="de" data-sap-ui-theme="sap_belize" data-sap-ui-resourceroots="{
+				&quot;gruene.ueberherrn&quot;: &quot;./&quot;
+			}" data-sap-ui-oninit="module:gruene/ueberherrn/ComponentLoader" data-sap-ui-compatversion="edge" data-sap-ui-async="true" data-sap-ui-frameoptions="trusted">
+	</script>
+</head>
+
+<body class="sapUiBody">
+	<div data-sap-ui-component data-name="gruene.ueberherrn" data-id="container" data-settings="{&quot;id&quot; : &quot;grueneUeberherrn&quot;}"></div>
+</body>
+</html>

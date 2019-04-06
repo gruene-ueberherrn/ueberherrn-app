@@ -1,0 +1,35 @@
+<mvc:View
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	controllerName="gruene.ueberherrn.controller.StandByDuty">
+	<ScrollContainer vertical="true" horizontal="false" height="100%">
+		<List sticky="HeaderToolbar" items="{standByDuty>/dutyItems}">
+			<headerToolbar>
+				<Toolbar design="Solid">
+					<Title class="sapUiSmallMarginBegin" text="{i18n>standByDutyTitle}: {standByDuty>/dutyTimeFrame}" level="H2" />
+				</Toolbar>
+			</headerToolbar>
+			<CustomListItem type="Inactive" press=".callNumber(${standByDuty>phone})">
+				<HBox class="sapUiTinyMarginTopBottom" justifyContent="SpaceBetween" alignItems="Center" width="100%">
+					<VBox class="sapUiTinyMarginBegin">
+						<ObjectIdentifier title="{standByDuty>dutyTypeText}" />
+						<Text text="{standByDuty>dutyTime}" />
+						<Text text="{standByDuty>name}" />
+						<HBox class="grueneUeberherrnHBoxDutyCall" visible="{= !!${standByDuty>phone} }" >
+							<core:Icon src="sap-icon://call" class="grueneUeberherrnIconCall" size="0.875rem" />
+							<Link text="{standByDuty>phone}" href="{path: 'standByDuty>phone', formatter: '.URLHelper.normalizeTel'}" wrapping="true" />
+							<Link text="{standByDuty>phone2}" href="{path: 'standByDuty>phone2', formatter: '.URLHelper.normalizeTel'}" wrapping="true"
+								visible="{= !!${standByDuty>phone2} }" class="sapUiSmallMarginBegin" />
+						</HBox>
+					</VBox>
+					<VBox class="sapUiTinyMarginEnd">
+						<!-- <Button class="grueneUeberherrnButtonTrigger" icon="sap-icon://call" type="Accept" press="onPhoneButtonPress" /> -->
+						<Button class="grueneUeberherrnButtonMap" icon="sap-icon://map" press=".onMapButtonPress" width="4rem"
+							enabled="{= !!${standByDuty>longitude} &amp;&amp; !!${standByDuty>latitude} }" />
+					</VBox>
+				</HBox>
+			</CustomListItem>
+		</List>
+	</ScrollContainer>
+</mvc:View>

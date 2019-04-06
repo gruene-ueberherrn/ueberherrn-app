@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/core/Core"],function(e){"use strict";e.attachInit(function(){Promise.all([e.getLibraryResourceBundle("sap.ui.core",true),e.getLibraryResourceBundle("sap.ui.layout",true),e.getLibraryResourceBundle("sap.m",true),e.getLibraryResourceBundle("sap.tnt",true)]).then(function(){sap.ui.require(["sap/ui/core/ComponentSupport"])})})});
