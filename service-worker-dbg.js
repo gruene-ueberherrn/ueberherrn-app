@@ -68,36 +68,36 @@ if (workbox) {
 
     self.addEventListener("install", (oEvent) => {
         const aUrlCore = [
-            "/index.html",
-            "/manifest.json",
-            "/register-worker.js",
-            "/resources/sap-ui-custom.js"
+            "./index.html",
+            "./manifest.json",
+            "./register-worker.js",
+            "./resources/sap-ui-custom.js"
         ];
         const aUrlAsset = [
-            "/css/style.css",
-            "/staticContent/license.txt",
-            "/resources/sap/ui/core/messagebundle_de.properties",
-            "/resources/sap/ui/layout/messagebundle_de.properties",
-            "/resources/sap/m/messagebundle_de.properties",
-            "/resources/sap/tnt/messagebundle_de.properties",
-            "/resources/sap/m/themes/sap_belize/library.css",
-            "/resources/sap/tnt/themes/sap_belize/library.css",
-            "/resources/sap/ui/core/themes/sap_belize/library.css",
-            "/resources/sap/ui/layout/themes/sap_belize/library.css",
-            "/resources/sap/ui/core/themes/base/fonts/SAP-icons.woff2",
-            "/resources/sap/ui/core/themes/sap_belize/fonts/72-Bold.woff2",
-            "/resources/sap/ui/core/themes/sap_belize/fonts/72-Regular.woff2"
+            "./css/style.css",
+            "./staticContent/license.txt",
+            "./resources/sap/ui/core/messagebundle_de.properties",
+            "./resources/sap/ui/layout/messagebundle_de.properties",
+            "./resources/sap/m/messagebundle_de.properties",
+            "./resources/sap/tnt/messagebundle_de.properties",
+            "./resources/sap/m/themes/sap_belize/library.css",
+            "./resources/sap/tnt/themes/sap_belize/library.css",
+            "./resources/sap/ui/core/themes/sap_belize/library.css",
+            "./resources/sap/ui/layout/themes/sap_belize/library.css",
+            "./resources/sap/ui/core/themes/base/fonts/SAP-icons.woff2",
+            "./resources/sap/ui/core/themes/sap_belize/fonts/72-Bold.woff2",
+            "./resources/sap/ui/core/themes/sap_belize/fonts/72-Regular.woff2"
         ];
         const aUrlImage = [
-            "/img/logo-128x128.png",
-            "/img/logo-144x144.png",
-            "/img/logo-152x152.png",
-            "/img/logo-192x192.png",
-            "/img/logo-512x512.png",
-            "/img/logo_gruene.png",
-            "/img/logo_gruene_impressum.png",
-            "/img/europa-denkmal-1.jpg",
-            "/img/ueberherrn_sprichwort.jpg"
+            "./img/logo-128x128.png",
+            "./img/logo-144x144.png",
+            "./img/logo-152x152.png",
+            "./img/logo-192x192.png",
+            "./img/logo-512x512.png",
+            "./img/logo_gruene.png",
+            "./img/logo_gruene_impressum.png",
+            "./img/europa-denkmal-1.jpg",
+            "./img/ueberherrn_sprichwort.jpg"
         ];
         const aUrlJsonData = [
             "https://gruene-ueberherrn.github.io/ueberherrn-app-data/dutyContact.json",
