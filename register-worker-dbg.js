@@ -62,7 +62,7 @@ function onNewServiceWorker(oRegistration, fnCallback) {
 if ("serviceWorker" in navigator) {
     // Use the window load event to keep the page load performant
     window.addEventListener("load", () => {
-        navigator.serviceWorker.register("/service-worker.js").then((oRegistration) => {
+        navigator.serviceWorker.register("./service-worker.js").then((oRegistration) => {
             console.log("Service Worker Registered");
 
             // Track updates to the Service Worker.
