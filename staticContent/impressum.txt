@@ -1,0 +1,8 @@
+<div class="sapMFT">
+<p>Dieses Angebot wird unterhalten von:</p>
+<p><strong>Bündnis 90/Die Grünen</strong>
+<br/>
+<strong>Gemeindeverband Überherrn</strong></p>
+<p>E-Mail: <a href="mailto:gruene.ueberherrn@gmail.com" style="text-decoration: none;">gruene.ueberherrn@gmail.com</a></p>
+<p>Es handelt sich <strong>nicht</strong> um ein offizielles Angebot der Gemeinde Überherrn. Der Betreiber erhebt keinen Anspruch auf Vollständigkeit und Richtigkeit der dargestellten Inhalte.</p>
+</div>

@@ -13,6 +13,7 @@ sap.ui.define([
 		URLHelper: URLHelper,
 
 		onInit: function () {
+			this.initBase();
 			this.getRouter().getRoute("numbersDetails").attachMatched(this._onRouteMatched, this);
 			this._initModel();
 		},

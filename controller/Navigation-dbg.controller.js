@@ -7,6 +7,7 @@ sap.ui.define([
 	return BaseController.extend("gruene.ueberherrn.controller.Navigation", {
 
 		onInit: function () {
+			this.initBase();
 			this._oPage = this.byId("page");
 			this.byId("navContainer").addEventDelegate({
 				onclick: () => {
@@ -47,12 +48,20 @@ sap.ui.define([
 
 			var sRoute = oEvent.getParameter("name");
 			var oNavigationList = this.byId("navigationList");
-			var aItems = oNavigationList.getItems();
-			var oItemForRoute = aItems.find((oItem) => {
+			var oItemForRoute = oNavigationList.getItems().find((oItem) => {
 				return oItem.data("route") === sRoute || sRoute === "numbersDetails" && oItem.data("route") === "numbers";
 			});
 			if (oItemForRoute) {
 				oNavigationList.setSelectedItem(oItemForRoute);
+			} else {
+				// Check the navigation list fixed items (impressum)
+				var oNavigationListFixed = this.byId("navigationListFixed");
+				oItemForRoute = oNavigationListFixed.getItems().find((oItem) => {
+					return oItem.data("route") === sRoute;
+				});
+				if (oItemForRoute) {
+					oNavigationListFixed.setSelectedItem(oItemForRoute);
+				}
 			}
 		}
 	});

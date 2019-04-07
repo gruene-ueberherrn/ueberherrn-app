@@ -75,6 +75,9 @@ if (workbox) {
         ];
         const aUrlAsset = [
             "./css/style.css",
+            "./staticContent/impressum.txt",
+            "./staticContent/googleAnalytics.txt",
+            "./staticContent/googleAnalyticsOptOut.txt",
             "./staticContent/license.txt",
             "./resources/sap/ui/core/messagebundle_de.properties",
             "./resources/sap/ui/layout/messagebundle_de.properties",

@@ -1,1 +1,1 @@
-sap.ui.define(["./BaseController"],function(e){"use strict";return e.extend("gruene.ueberherrn.controller.App",{onInit:function(){}})});
+sap.ui.define(["./BaseController"],function(e){"use strict";return e.extend("gruene.ueberherrn.controller.App",{onInit:function(){},onAfterRendering:function(){this.getOwnerComponent().getEventBus().publish("grueneUeberherrn","initialAppRenderingFinished")}})});

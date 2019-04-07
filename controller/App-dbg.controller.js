@@ -7,6 +7,10 @@ sap.ui.define([
 
 		onInit: function () {
 
+		},
+
+		onAfterRendering: function () {
+			this.getOwnerComponent().getEventBus().publish("grueneUeberherrn", "initialAppRenderingFinished");
 		}
 	});
 });

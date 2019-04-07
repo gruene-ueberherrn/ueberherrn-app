@@ -37,12 +37,21 @@ sap.ui.define([
 			// create the views based on the url/hash
 			this.getRouter().initialize();
 
-			// Register an event handler to inform the user when the UI is refreshed automatically
-			Core.getEventBus().subscribe("grueneUeberherrn", "newVersionRefresh", this.onNewVersionRefresh, this);
+			// Register an event handler to inform the user when the UI is refreshed automatically or when Google Analytics is deactivated
+			var oEventBus = Core.getEventBus();
+			oEventBus.subscribe("grueneUeberherrn", "newVersionRefresh", this.onNewVersionRefresh, this);
+			oEventBus.subscribe("grueneUeberherrn", "googleAnalyticsOptOut", this.onGoogleAnalyticsOptOut, this);
 		},
 
 		onNewVersionRefresh: function () {
 			MessageToast.show(this.getModel("i18n").getResourceBundle().getText("newVersionRefresh"), {
+				duration: 5000,
+				closeOnBrowserNavigation: false
+			});
+		},
+
+		onGoogleAnalyticsOptOut: function () {
+			MessageToast.show(this.getModel("i18n").getResourceBundle().getText("googleAnalyticsOptOut"), {
 				duration: 5000,
 				closeOnBrowserNavigation: false
 			});
@@ -87,7 +96,7 @@ sap.ui.define([
 			return new Promise((fnResolve, fnReject) => {
 				var oStandByDutyData = {
 					dutyContact: {},
-					dutyCycle: {}
+					dutyCycle: []
 				};
 				Promise.all([
 					this.requestGet("https://gruene-ueberherrn.github.io/ueberherrn-app-data/dutyContact.json"),

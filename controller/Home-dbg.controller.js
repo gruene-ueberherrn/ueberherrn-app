@@ -6,6 +6,7 @@ sap.ui.define([
 	return BaseController.extend("gruene.ueberherrn.controller.Home", {
 
 		onInit: function () {
+			this.initBase();
 			var sHomeText = "<p>Die Gemeinde Überherrn ist mit ihren rund 13.000 Einwohnern eine weltoffene, sympathische Gemeinde im Südwesten des Saarlandes. Im Zuge der saarländischen Gebiets- und Verwaltungsreform wurden die ehemals selbstständigen Gemeinden 1974 zu Ortsteilen und zur Gemeinde Überherrn zusammengelegt.</p>" +
 				"<p>Der Ortsteil <strong>Überherrn</strong> ist der wirtschaftliche Mittelpunkt der Gemeinde. Hier gibt es vielfältige Einkaufsmöglichkeiten. Auch Handwerks- und Dienstleistungsfirmen sowie mittelständige Unternehmen haben sich hier niedergelassen. Mit dem Kulturhaus steht ein attraktiver Veranstaltungs-, Versammlungs- und Tagungsort zur Verfügung. In Überherrn befinden sich auch das Parkbad und der Campingplatz.</p>" +
 				"<p><strong>Altforweiler</strong> bietet durch seine geschützte Lage eine besondere Wohnqualität. Die Dorfgemeinschaft wird von einem regen Vereinseben geprägt.</p>" +

@@ -17,9 +17,9 @@
 }
 
 /* Reduce padding in scroll container */
-.grueneUeberherrn .sapMScrollCont.sapUiContentPadding > .sapMScrollContScroll {
-    padding: 0.5rem;
-}
+/* .grueneUeberherrn .sapMScrollCont.sapUiContentPadding > .sapMScrollContScroll { */
+    /* padding: 0.5rem; */
+/* } */
 
 /* Change the height of the map button */
 .grueneUeberherrnButtonMap {

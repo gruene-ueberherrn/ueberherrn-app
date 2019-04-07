@@ -1,16 +1,24 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "../model/formatter",
-    "sap/ui/core/routing/History",
-    "sap/m/library"
-], function (Controller, formatter, History, mobileLibrary) {
+    "sap/ui/core/routing/History"
+], function (Controller, formatter, History) {
     "use strict";
-
-    var URLHelper = mobileLibrary.URLHelper;
 
     return Controller.extend("gruene.ueberherrn.controller.BaseController", {
 
         formatter: formatter,
+
+        initBase: function () {
+            this.getOwnerComponent().getEventBus().subscribe("grueneUeberherrn", "initialAppRenderingFinished", this.onInitialAppRenderingFinished, this);
+        },
+
+        onInitialAppRenderingFinished: function () {
+            let oScrollContainer = this.byId("scrollContainer");
+            if (oScrollContainer) {
+                oScrollContainer.scrollTo(0, 0, 0);
+            }
+        },
 
         getRouter: function () {
             return this.getOwnerComponent().getRouter();
@@ -26,11 +34,6 @@ sap.ui.define([
 
         getResourceBundle: function () {
             return this.getOwnerComponent().getModel("i18n").getResourceBundle();
-        },
-
-        callNumber: function (sPhone) {
-            // URLHelper.triggerTel("06836-1772");
-            window.location.href = URLHelper.normalizeTel("06836-1772");
         },
 
         onNavBack: function () {

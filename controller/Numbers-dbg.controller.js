@@ -7,6 +7,7 @@ sap.ui.define([
 	return BaseController.extend("gruene.ueberherrn.controller.Numbers", {
 
 		onInit: function () {
+			this.initBase();
 			this._initModel();
 			this._setNumbers();
 		},

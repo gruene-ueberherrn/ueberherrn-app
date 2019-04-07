@@ -28,7 +28,7 @@
 					</tnt:NavigationList>
 				</tnt:item>
 				<tnt:fixedItem>
-					<tnt:NavigationList>
+					<tnt:NavigationList id="navigationListFixed">
 						<tnt:NavigationListItem app:route="impressum" text="{i18n>navImpressum}" icon="sap-icon://hint" />
 					</tnt:NavigationList>
 				</tnt:fixedItem>

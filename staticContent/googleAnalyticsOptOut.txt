@@ -1,0 +1,9 @@
+<div class="sapMFT sapUiSmallMarginBottom">
+Sie können die Speicherung aller Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern.
+Wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser und anderer Websites vollumfänglich werden nutzen können.
+Sie können darüber hinaus die Übermittlung der durch das Cookie erzeugten und auf Ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem Sie das unter dem folgenden Link verfügbare Browser-Plugin herunterladen und installieren:
+<a href="https://tools.google.com/dlpage/gaoptout?hl=de" style="text-decoration: none;">https://tools.google.com/dlpage/gaoptout?hl=de</a>.
+Wir bieten Ihnen darüber hinaus die Möglichkeit, die Erfassung Ihrer Website-Nutzungs-Daten für diese Website zu deaktivieren, indem Sie auf den folgenden Link klicken:
+<a href="javascript:gaOptout();" style="text-decoration: none;" onclick="if (window.sap && window.sap.ui && window.sap.ui.require) { sap.ui.require(['sap/ui/core/Core'], (Core) => { Core.getEventBus().publish('grueneUeberherrn', 'googleAnalyticsOptOut'); }); } else { alert('Google Analytics wurde deaktiviert'); }">Erfassung von Daten durch Google Analytics für diese Website deaktivieren</a>.
+In diesem Fall wird ein spezielles Opt-Out-Cookie gesetzt, das die zukünftige Erfassung Ihrer Nutzungsdaten beim Besuch dieser Website verhindert.
+</div>

@@ -3,7 +3,7 @@
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:core="sap.ui.core"
 	controllerName="gruene.ueberherrn.controller.NumbersDetails">
-	<ScrollContainer vertical="true" horizontal="false" height="100%">
+	<ScrollContainer id="scrollContainer" vertical="true" horizontal="false" height="100%">
 		<List sticky="HeaderToolbar"
 			items="{ path: 'numbersDetails>/numberTypeItems', 
 					 sorter: { path: 'numbersDetails>index' } }">
