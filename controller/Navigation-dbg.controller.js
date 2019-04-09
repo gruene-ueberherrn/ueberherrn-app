@@ -1,21 +1,25 @@
 sap.ui.define([
 	"./BaseController",
-	"sap/ui/core/routing/History"
-], function (BaseController, History) {
+	"sap/ui/core/routing/History",
+	"sap/ui/Device"
+], function (BaseController, History, Device) {
 	"use strict";
 
 	return BaseController.extend("gruene.ueberherrn.controller.Navigation", {
 
 		onInit: function () {
-			this.initBase();
 			this._oPage = this.byId("page");
-			this.byId("navContainer").addEventDelegate({
-				onclick: () => {
-					if (this._oPage.getSideExpanded()) {
-						this._oPage.setSideExpanded(false);
+
+			if (Device.system.phone) {
+				this.byId("navContainer").addEventDelegate({
+					onclick: () => {
+						if (this._oPage.getSideExpanded()) {
+							this._oPage.setSideExpanded(false);
+						}
 					}
-				}
-			});
+				});
+			}
+
 			this.getRouter().attachRoutePatternMatched(null, this._onRoutePatternMatched, this);
 		},
 
@@ -30,7 +34,10 @@ sap.ui.define([
 			} else {
 				this.getRouter().navTo(sRoute, {}, true);
 			}
-			this._oPage.setSideExpanded(false);
+
+			if (Device.system.phone) {
+				this._oPage.setSideExpanded(false);
+			}
 		},
 
 		onSideNavButtonPress: function () {
