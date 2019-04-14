@@ -97,9 +97,7 @@ sap.ui.define([
 
 			// Google Analytics
 			if (window.gtag) {
-				gtag("event", "screen_view", {
-					"screen_name": sRoute
-				});
+				gtag("event", "select_" + sRoute);
 			}
 		}
 	});

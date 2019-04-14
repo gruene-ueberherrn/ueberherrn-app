@@ -18,7 +18,7 @@
 			<Text text="und" />
 			<TimePicker value="{townHallCallbackService>/selectedEndTime}" valueFormat="HH:mm" displayFormat="HH:mm" minutesStep="15" width="100%" required="true" />
 			<Label text="unter"/>
-			<Input value="{townHallCallbackService>/enteredNumber}" placeholder="Telefonnummer" width="100%" />
+			<Input value="{townHallCallbackService>/enteredNumber}" type="Tel" placeholder="Telefonnummer" width="100%" />
 			<Label class="sapUiSmallMarginTop" text="Weitere Informationen:" />
 			<TextArea value="{townHallCallbackService>/enteredComment}" placeholder="Kommentar" width="100%" height="5rem" />
 			<Button class="sapUiSmallMarginTop" press="onSend" text="Absenden" width="100%" />
