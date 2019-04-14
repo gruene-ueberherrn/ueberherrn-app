@@ -1,0 +1,14 @@
+<mvc:View
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	controllerName="gruene.ueberherrn.controller.TownHallOpeningTimes">
+	<ScrollContainer id="scrollContainer" vertical="true" horizontal="false" height="100%" class="sapUiContentPadding">
+		<VBox>
+			<Title text="{i18n>townHallOpeningTimesTitle}" level="H2" titleStyle="H2" wrapping="true" />
+			<FormattedText htmlText="{townHallOpeningTimes>/addressText}"/>
+			<FormattedText htmlText="{townHallOpeningTimes>/openingTimesRegularText}"/>
+			<FormattedText htmlText="{townHallOpeningTimes>/openingTimesExtendedText}"/>
+			<FormattedText htmlText="{townHallOpeningTimes>/numberText}"/>
+		</VBox>
+	</ScrollContainer>
+</mvc:View>

@@ -5,7 +5,7 @@
 	<ScrollContainer id="scrollContainer" vertical="true" horizontal="false" height="100%">
 		<List sticky="HeaderToolbar"
 			items="{ path: 'numbers>/', 
-					 sorter: { path: 'numbers>numberType' } }">
+					 sorter: { path: 'numberType' } }">
 			<headerToolbar>
 				<Toolbar design="Solid">
 					<Title class="sapUiSmallMarginBegin" text="{i18n>numbersTitle}" level="H2" />

@@ -147,6 +147,20 @@
 					]
 				},
 				{
+					"pattern": "TownHallOpeningTimes",
+					"name": "townHallOpeningTimes",
+					"target": [
+						"townHallOpeningTimes"
+					]
+				},
+				{
+					"pattern": "TownHallCallbackService",
+					"name": "townHallCallbackService",
+					"target": [
+						"townHallCallbackService"
+					]
+				},
+				{
 					"pattern": "Impressum",
 					"name": "impressum",
 					"target": [
@@ -193,6 +207,20 @@
 					"controlId": "navContainer",
 					"viewName": "Hotels",
 					"viewId": "hotels",
+					"viewLevel": 1
+				},
+				"townHallOpeningTimes": {
+					"parent": "navigation",
+					"controlId": "navContainer",
+					"viewName": "TownHallOpeningTimes",
+					"viewId": "townHallOpeningTimes",
+					"viewLevel": 1
+				},
+				"townHallCallbackService": {
+					"parent": "navigation",
+					"controlId": "navContainer",
+					"viewName": "TownHallCallbackService",
+					"viewId": "townHallCallbackService",
 					"viewLevel": 1
 				},
 				"impressum": {

@@ -25,6 +25,10 @@
 						<tnt:NavigationListItem app:route="standByDuty" text="{i18n>navStandByDuty}" icon="sap-icon://calendar" />
 						<tnt:NavigationListItem app:route="numbers" text="{i18n>navImportantNumbers}" icon="sap-icon://phone" />
 						<tnt:NavigationListItem app:route="hotels" text="{i18n>navHotels}" icon="sap-icon://building" />
+						<tnt:NavigationListItem text="{i18n>navTownHall}" icon="sap-icon://official-service" expanded="true">
+							<tnt:NavigationListItem app:route="townHallOpeningTimes" text="{i18n>navTownHallOpeningTimes}" />
+							<tnt:NavigationListItem app:route="townHallCallbackService" text="{i18n>navTownHallCallbackService}" />
+						</tnt:NavigationListItem>
 					</tnt:NavigationList>
 				</tnt:item>
 				<tnt:fixedItem>

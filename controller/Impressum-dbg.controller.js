@@ -28,13 +28,6 @@ sap.ui.define([
 			this.requestGet("./staticContent/impressum.txt").then((sImpressum) => {
 				this.getModel("impressum").setProperty("/impressumText", sImpressum);
 			});
-			// var oBundle = this.getResourceBundle();
-			// var sText = "<p>" + oBundle.getText("impressumFirstLine") + "</p>" +
-			// 	"<p><strong>" + oBundle.getText("impressumNameFirst") + "</strong><br/>" +
-			// 	"<strong>" + oBundle.getText("impressumNameSecond") + "</strong></p>" +
-			// 	"<p>" + oBundle.getText("impressumMail", ["gruene.ueberherrn@gmail.com"]) + "</p>" +
-			// 	"<p>" + oBundle.getText("impressumLastLine") + " <strong>Felix Guldner</strong>.</p>";
-			// this.getModel("impressum").setProperty("/impressumText", sText);
 		},
 
 		_setGoogleAnalyticsText: function () {

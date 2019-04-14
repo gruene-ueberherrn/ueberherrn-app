@@ -24,19 +24,27 @@ sap.ui.define([
 		},
 
 		onItemSelect: function (oEvent) {
-			var sRoute = oEvent.getParameter("item").data("route");
-			var sPreviousHash = History.getInstance().getPreviousHash();
-			if (sPreviousHash) {
-				if (sRoute !== "numbers") {
-					this._sRouteForwarding = sRoute;
-				}
-				history.go(-1);
-			} else {
-				this.getRouter().navTo(sRoute, {}, true);
-			}
+			var oItem = oEvent.getParameter("item");
+			var sRoute = oItem.data("route");
 
-			if (Device.system.phone) {
-				this._oPage.setSideExpanded(false);
+			if (sRoute) {
+				// Navigate to the respective route
+				var sPreviousHash = History.getInstance().getPreviousHash();
+				if (sPreviousHash) {
+					if (sRoute !== "numbers") {
+						this._sRouteForwarding = sRoute;
+					}
+					history.go(-1);
+				} else {
+					this.getRouter().navTo(sRoute, {}, true);
+				}
+
+				if (Device.system.phone) {
+					this._oPage.setSideExpanded(false);
+				}
+			} else {
+				// No route means this is a grouping item; just toggle the item
+				oItem.setExpanded(!oItem.getExpanded());
 			}
 		},
 
@@ -53,11 +61,27 @@ sap.ui.define([
 				return;
 			}
 
+			// Select the correct item in the navigation list
 			var sRoute = oEvent.getParameter("name");
 			var oNavigationList = this.byId("navigationList");
-			var oItemForRoute = oNavigationList.getItems().find((oItem) => {
-				return oItem.data("route") === sRoute || sRoute === "numbersDetails" && oItem.data("route") === "numbers";
-			});
+			var oItemForRoute = null;
+			var aItems = oNavigationList.getItems();
+			for (var i = 0; i < aItems.length; i++) {
+				if (aItems[i].data("route") === sRoute || sRoute === "numbersDetails" && aItems[i].data("route") === "numbers") {
+					oItemForRoute = aItems[i];
+				}
+				var aSubItems = aItems[i].getItems();
+				for (var j = 0; j < aSubItems.length; j++) {
+					if (aSubItems[j].data("route") === sRoute) {
+						oItemForRoute = aSubItems[j];
+						break;
+					}
+				}
+				if (oItemForRoute) {
+					break;
+				}
+			}
+
 			if (oItemForRoute) {
 				oNavigationList.setSelectedItem(oItemForRoute);
 			} else {
@@ -69,6 +93,13 @@ sap.ui.define([
 				if (oItemForRoute) {
 					oNavigationListFixed.setSelectedItem(oItemForRoute);
 				}
+			}
+
+			// Google Analytics
+			if (window.gtag) {
+				gtag("event", "screen_view", {
+					"screen_name": sRoute
+				});
 			}
 		}
 	});

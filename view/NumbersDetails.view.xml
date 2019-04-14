@@ -6,7 +6,7 @@
 	<ScrollContainer id="scrollContainer" vertical="true" horizontal="false" height="100%">
 		<List sticky="HeaderToolbar"
 			items="{ path: 'numbersDetails>/numberTypeItems', 
-					 sorter: { path: 'numbersDetails>index' } }">
+					 sorter: { path: 'index' } }">
 			<headerToolbar>
 				<Toolbar design="Solid">
 					<Button icon="sap-icon://nav-back" type="Transparent" press=".onNavBack" />
