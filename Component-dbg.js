@@ -1,12 +1,12 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
-	"sap/ui/Device",
 	"sap/ui/core/Core",
 	"sap/m/MessageToast",
+	"sap/ui/core/date/Gregorian",
 	"./ComponentLoader", // ensure it's included in sap-ui-custom
 	"./model/models",
 	"./model/formatter",
-], function (UIComponent, Device, Core, MessageToast, ComponentLoader, models, formatter) {
+], function (UIComponent, Core, MessageToast, Gregorian, ComponentLoader, models, formatter) {
 	"use strict";
 
 	return UIComponent.extend("gruene.ueberherrn.Component", {
