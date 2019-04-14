@@ -18,8 +18,8 @@
 						<Text text="{standByDuty>name}" />
 						<HBox class="grueneUeberherrnHBoxDutyCall" visible="{= !!${standByDuty>phone} }" >
 							<core:Icon src="sap-icon://call" class="grueneUeberherrnIconCall" size="0.875rem" />
-							<Link text="{standByDuty>phone}" href="{path: 'standByDuty>phone', formatter: '.URLHelper.normalizeTel'}" target="_blank" wrapping="true" />
-							<Link text="{standByDuty>phone2}" href="{path: 'standByDuty>phone2', formatter: '.URLHelper.normalizeTel'}" target="_blank" wrapping="true"
+							<Link text="{standByDuty>phone}" href="{path: 'standByDuty>phone', formatter: '.URLHelper.normalizeTel'}" wrapping="true" />
+							<Link text="{standByDuty>phone2}" href="{path: 'standByDuty>phone2', formatter: '.URLHelper.normalizeTel'}" wrapping="true"
 								visible="{= !!${standByDuty>phone2} }" class="sapUiSmallMarginBegin" />
 						</HBox>
 					</VBox>

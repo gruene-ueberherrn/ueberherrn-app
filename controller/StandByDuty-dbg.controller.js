@@ -42,7 +42,7 @@ sap.ui.define([
 			} else {
 				sUrl = "geo:0,0?q=" + sLatitude + "," + sLongitude + "(" + sName + ")";
 			}
-			URLHelper.redirect(sUrl, true);
+			URLHelper.redirect(sUrl);
 		},
 
 		_initModel: function () {
