@@ -16,12 +16,7 @@
 	<title>&#xDC;berherrn App</title>
 
 	<!-- Register service worker -->
-	<script src="./register-worker.js"></script>
-
-	<script id="sap-ui-bootstrap" src="resources/sap-ui-custom.js" data-sap-ui-libs="sap.m, sap.ui.layout, sap.ui.core, sap.tnt" data-sap-ui-xx-waitfortheme="true" data-sap-ui-xx-supportedlanguages="de" data-sap-ui-theme="sap_belize" data-sap-ui-resourceroots="{
-				&quot;gruene.ueberherrn&quot;: &quot;./&quot;
-			}" data-sap-ui-oninit="module:gruene/ueberherrn/ComponentLoader" data-sap-ui-compatversion="edge" data-sap-ui-async="true" data-sap-ui-frameoptions="trusted">
-	</script>
+	<!-- <script src="./register-worker.js"></script> -->
 
 	<!-- Google Analytics Opt-Out Script -->
 	<script>
@@ -49,6 +44,12 @@
 </head>
 
 <body class="sapUiBody">
+	<img id="splashscreen" src="img/logo-256x256.png" style="width:100%;max-width:256px;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);">
 	<div data-sap-ui-component data-name="gruene.ueberherrn" data-id="container" data-settings="{&quot;id&quot; : &quot;grueneUeberherrn&quot;}"></div>
+
+	<script id="sap-ui-bootstrap" src="resources/sap-ui-custom.js" data-sap-ui-libs="sap.m, sap.ui.layout, sap.ui.core, sap.tnt" data-sap-ui-xx-waitfortheme="true" data-sap-ui-xx-supportedlanguages="de" data-sap-ui-theme="sap_belize" data-sap-ui-resourceroots="{
+				&quot;gruene.ueberherrn&quot;: &quot;./&quot;
+			}" data-sap-ui-oninit="module:gruene/ueberherrn/ComponentLoader" data-sap-ui-compatversion="edge" data-sap-ui-async="true" data-sap-ui-frameoptions="trusted">
+	</script>
 </body>
 </html>

@@ -25,17 +25,11 @@ sap.ui.define([
 			this._sIntervalID = window.setInterval(() => {
 				this._setDutyData();
 			}, 60 * 1000);
-
-			// this.getOwnerComponent().getEventBus().subscribe("grueneUeberherrn", "initialAppRenderingFinished", this.onInitialAppRenderingFinished, this);
 		},
 
 		onExit: function () {
 			window.clearInterval(this._sIntervalID);
 		},
-
-		// onInitialAppRenderingFinished: function () {
-		// 	this.byId("scrollContainer").scrollTo(0, 0, 0);
-		// },
 
 		onMapButtonPress: function (oEvent) {
 			var oContext = oEvent.getSource().getBindingContext("standByDuty");
@@ -48,7 +42,7 @@ sap.ui.define([
 			} else {
 				sUrl = "geo:0,0?q=" + sLatitude + "," + sLongitude + "(" + sName + ")";
 			}
-			URLHelper.redirect(sUrl);
+			URLHelper.redirect(sUrl, true);
 		},
 
 		_initModel: function () {

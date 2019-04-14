@@ -11,7 +11,10 @@ sap.ui.define([
             Core.getLibraryResourceBundle("sap.m", true),
             Core.getLibraryResourceBundle("sap.tnt", true)
         ]).then(function () {
-            sap.ui.require(["sap/ui/core/ComponentSupport"]);
+            // Remove the splash screen
+            // let splashscreen = document.getElementById("splashscr'een");
+            // splashscreen.parentNode.removeChild(splashscreen);
+            // sap.ui.require(["sap/ui/core/ComponentSupport"]);
         });
     });
 });

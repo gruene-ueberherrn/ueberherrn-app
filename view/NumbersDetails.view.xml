@@ -18,8 +18,8 @@
 					<ObjectIdentifier title="{numbersDetails>name}" />
 					<HBox class="grueneUeberherrnHBoxPhone">
 						<core:Icon src="sap-icon://call" class="grueneUeberherrnIconCall" size="0.875rem" visible="{= !!${numbersDetails>phone} }" />
-						<Link text="{numbersDetails>phone}" href="{path: 'numbersDetails>phone', formatter: '.URLHelper.normalizeTel'}" wrapping="true" />
-						<Link text="{numbersDetails>phone2}" href="{path: 'numbersDetails>phone2', formatter: '.URLHelper.normalizeTel'}" wrapping="true"
+						<Link text="{numbersDetails>phone}" href="{path: 'numbersDetails>phone', formatter: '.URLHelper.normalizeTel'}" target="_blank" wrapping="true" />
+						<Link text="{numbersDetails>phone2}" href="{path: 'numbersDetails>phone2', formatter: '.URLHelper.normalizeTel'}" target="_blank" wrapping="true"
 							visible="{= !!${numbersDetails>phone2} }" class="sapUiSmallMarginBegin" />
 					</HBox>
 				</VBox>
