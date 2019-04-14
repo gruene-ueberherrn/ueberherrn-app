@@ -1,7 +1,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 if (workbox) {
-    console.log("App Version: 0.0.1");
+    console.log("App Version: 0.0.1-20190414");
 
     // index.html / manifest.json and JavaScript files
     workbox.routing.registerRoute(
