@@ -14,9 +14,16 @@ sap.ui.define([
         },
 
         onInitialAppRenderingFinished: function () {
+            // Scroll to top
             let oScrollContainer = this.byId("scrollContainer");
             if (oScrollContainer) {
                 oScrollContainer.scrollTo(0, 0, 0);
+            }
+
+            // Remove the splash screen
+            let splashscreen = document.getElementById("splashscreen");
+            if (splashscreen) {
+                splashscreen.parentNode.removeChild(splashscreen);
             }
         },
 
