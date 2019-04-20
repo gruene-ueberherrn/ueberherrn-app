@@ -1,17 +1,17 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 if (workbox) {
-    console.log("App Version: 0.0.1-20190414-2210");
+    console.log("App Version: 0.0.1-20190419-2339");
 
     // index.html / manifest.json and JavaScript files
     workbox.routing.registerRoute(
-        /(index\.html|.*\.js$|manifest\.json|)/,
+        /(index\.html|.*\.js$|manifest\.json$)/,
         workbox.strategies.cacheFirst()
     );
 
     // CSS, i18n, fonts, text files
     workbox.routing.registerRoute(
-        /(.*\.css|.*\.properties|.*\.woff2|.*\.txt)/,
+        /(.*\.css$|.*\.properties$|.*\.woff2$|.*\.txt$)/,
         workbox.strategies.cacheFirst({
             // Use a custom cache name
             cacheName: "asset-cache"
@@ -20,7 +20,7 @@ if (workbox) {
 
     // Image files
     workbox.routing.registerRoute(
-        /.*\.(?:png|jpg|jpeg|svg|gif)/,
+        /.*\.(?:png|jpg|jpeg|svg|gif)$/,
         // Use the cache if it's available
         workbox.strategies.cacheFirst({
             // Use a custom cache name
@@ -30,7 +30,7 @@ if (workbox) {
 
     // JSON data files
     workbox.routing.registerRoute(
-        /.*\.json/,
+        /.*\.json$/,
         workbox.strategies.networkFirst({
             cacheName: "data-cache"
         })
@@ -93,10 +93,16 @@ if (workbox) {
             "https://gruene-ueberherrn.github.io/ueberherrn-app-data/importantNumbers.json",
             "https://gruene-ueberherrn.github.io/ueberherrn-app-data/hotels.json"
         ];
-        oEvent.waitUntil(caches.open(workbox.core.cacheNames.runtime).then((cache) => cache.addAll(aUrlCore)));
-        oEvent.waitUntil(caches.open("asset-cache").then((cache) => cache.addAll(aUrlAsset)));
-        oEvent.waitUntil(caches.open("image-cache").then((cache) => cache.addAll(aUrlImage)));
-        oEvent.waitUntil(caches.open("data-cache").then((cache) => cache.addAll(aUrlJsonData)));
+        // const aUrlJsonData = [
+        //     "/data/dutyContact.json",
+        //     "/data/dutyCycle.json",
+        //     "/data/importantNumbers.json",
+        //     "/data/hotels.json"
+        // ];
+        oEvent.waitUntil(caches.delete(workbox.core.cacheNames.runtime).then(() => caches.open(workbox.core.cacheNames.runtime).then((cache) => cache.addAll(aUrlCore))));
+        oEvent.waitUntil(caches.delete("asset-cache").then(() => caches.open("asset-cache").then((cache) => cache.addAll(aUrlAsset))));
+        oEvent.waitUntil(caches.delete("image-cache").then(() => caches.open("image-cache").then((cache) => cache.addAll(aUrlImage))));
+        oEvent.waitUntil(caches.delete("data-cache").then(() => caches.open("data-cache").then((cache) => cache.addAll(aUrlJsonData))));
     });
 } else {
     console.log("Workbox didn't load");

@@ -50,9 +50,7 @@ sap.ui.define([
 
 		onSend: function () {
 			let sText = "Diese Funktion ist leider noch nicht verfügbar.";
-			MessageBox.information(sText, {
-
-			});
+			MessageBox.information(sText, {});
 		}
 	});
 });

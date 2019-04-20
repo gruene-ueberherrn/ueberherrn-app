@@ -178,17 +178,22 @@ sap.ui.define([
 		},
 
 		_getDutyTime: function (aDutyTime) {
-			var sDutyTime = "";
+			let sDutyTime = "";
 			if (aDutyTime.length === 1) {
-				var dDate = this._getDateByWeekday(aDutyTime[0]);
+				let dDate = this._getDateByWeekday(aDutyTime[0]);
 				sDutyTime = formatter.getWeekdayLong(dDate) + " " + formatter.dateFull(dDate);
 			} else if (aDutyTime.length === 2) {
-				var dDateOne = this._getDateByWeekday(aDutyTime[0]);
-				var dDateTwo = this._getDateByWeekday(aDutyTime[1]);
+				let dDateOne = this._getDateByWeekday(aDutyTime[0]);
+				let dDateTwo = this._getDateByWeekday(aDutyTime[1]);
 				sDutyTime = formatter.getWeekdayShort(dDateOne) + " " + formatter.dateFull(dDateOne) + " / " +
 					formatter.getWeekdayShort(dDateTwo) + " " + formatter.dateFull(dDateTwo);
+			} else if (aDutyTime.length > 2) {
+				let dDateOne = this._getDateByWeekday(aDutyTime[0]);
+				let dDateTwo = this._getDateByWeekday(aDutyTime[aDutyTime.length - 1]);
+				sDutyTime = formatter.getWeekdayShort(dDateOne) + " " + formatter.dateFull(dDateOne) + " \u2012 " +
+					formatter.getWeekdayShort(dDateTwo) + " " + formatter.dateFull(dDateTwo);
 			} else {
-				var dCurrentDate = new Date();
+				let dCurrentDate = new Date();
 				sDutyTime = formatter.getWeekdayLong(dCurrentDate) + " " + formatter.dateFull(dCurrentDate);
 			}
 			return sDutyTime;

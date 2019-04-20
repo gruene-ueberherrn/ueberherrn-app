@@ -441,8 +441,8 @@ html:not([data-sap-ui-animation='off']) .sapTntToolPageAside {
 .sap-tablet .sapTntToolPageAsideCollapsed .sapTntToolPageAside {
   width: 3rem;
 }
-.sap-desktop .sapTntToolPageAsideCollapsed .sapTntToolPageMain,
-.sap-tablet .sapTntToolPageAsideCollapsed .sapTntToolPageMain {
+.sap-desktop .sapTntToolPageAsideCollapsed .sapTntToolPageAside + .sapTntToolPageMain,
+.sap-tablet .sapTntToolPageAsideCollapsed .sapTntToolPageAside + .sapTntToolPageMain {
   padding-left: 3rem;
 }
 .sap-phone .sapTntToolPageAside {
@@ -519,8 +519,8 @@ html:not([data-sap-ui-animation='off']) .sapTntToolPageAside {
 .sap-tablet .sapUiSizeCompact .sapTntToolPageAsideCollapsed .sapTntToolPageAside {
   width: 3rem;
 }
-.sap-desktop .sapUiSizeCompact .sapTntToolPageAsideCollapsed .sapTntToolPageMain,
-.sap-tablet .sapUiSizeCompact .sapTntToolPageAsideCollapsed .sapTntToolPageMain {
+.sap-desktop .sapUiSizeCompact .sapTntToolPageAsideCollapsed .sapTntToolPageAside + .sapTntToolPageMain,
+.sap-tablet .sapUiSizeCompact .sapTntToolPageAsideCollapsed .sapTntToolPageAside + .sapTntToolPageMain {
   padding-left: 3rem;
 }
 .sap-phone .sapUiSizeCompact .sapTntToolPageAside {
@@ -688,4 +688,4 @@ html[data-sap-ui-browser^="ed"].sap-desktop .sapTntNavLIItem:focus::before {
 }
 
 /* Inline theming parameters */
-#sap-ui-theme-sap\.tnt{background-image:url('data:text/plain;utf-8,%7B%22_sap_tnt_ToolPage_AsideWidth%22%3A%2215rem%22%2C%22_sap_tnt_ToolPage_AsideWidthOnTablet%22%3A%223rem%22%2C%22_sap_tnt_ToolPage_HeaderHeight%22%3A%223rem%22%2C%22_sap_tnt_ToolPage_FooterHeight%22%3A%223rem%22%2C%22_sap_tnt_ToolPage_CompactAsideWidth%22%3A%2215rem%22%2C%22_sap_tnt_ToolPage_CompactAsideWidthOnTablet%22%3A%223rem%22%2C%22_sap_tnt_ToolPage_CompactHeaderHeight%22%3A%223rem%22%2C%22_sap_tnt_ToolPage_CompactFooterHeight%22%3A%222rem%22%2C%22_sap_tnt_ToolPage_AnimationDuration%22%3A%220.3s%22%2C%22_sap_tnt_InfoLabel_Margin%22%3A%220.9375rem%22%2C%22_sap_tnt_InfoLabel_NoText_Padding%22%3A%220.5625rem%22%2C%22_sap_tnt_InfoLabel_NoTextDisplayOnly_Padding%22%3A%220.5rem%22%2C%22_sap_tnt_InfoLabel_LineHeight%22%3A%221.125rem%22%2C%22_sap_tnt_InfoLabel_LineHeightDisplayOnly%22%3A%221rem%22%7D')}
+#sap-ui-theme-sap\.tnt{background-image:url('data:text/plain;utf-8,%7B%22_sap_tnt_ToolHeader_ITHOverflowButtonTop%22%3A%220.5rem%22%2C%22_sap_tnt_ToolHeader_Height%22%3A%223rem%22%2C%22_sap_tnt_ToolPage_AsideWidth%22%3A%2215rem%22%2C%22_sap_tnt_ToolPage_AsideWidthOnTablet%22%3A%223rem%22%2C%22_sap_tnt_ToolPage_HeaderHeight%22%3A%223rem%22%2C%22_sap_tnt_ToolPage_FooterHeight%22%3A%223rem%22%2C%22_sap_tnt_ToolPage_CompactAsideWidth%22%3A%2215rem%22%2C%22_sap_tnt_ToolPage_CompactAsideWidthOnTablet%22%3A%223rem%22%2C%22_sap_tnt_ToolPage_CompactHeaderHeight%22%3A%223rem%22%2C%22_sap_tnt_ToolPage_CompactFooterHeight%22%3A%222rem%22%2C%22_sap_tnt_ToolPage_AnimationDuration%22%3A%220.3s%22%2C%22_sap_tnt_InfoLabel_Margin%22%3A%220.9375rem%22%2C%22_sap_tnt_InfoLabel_NoTextPadding%22%3A%220.5625rem%22%2C%22_sap_tnt_InfoLabel_NoTextDisplayOnlyPadding%22%3A%220.5rem%22%2C%22_sap_tnt_InfoLabel_LineHeight%22%3A%221.125rem%22%2C%22_sap_tnt_InfoLabel_LineHeightDisplayOnly%22%3A%221rem%22%7D')}

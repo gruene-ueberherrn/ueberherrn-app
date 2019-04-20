@@ -2,12 +2,22 @@ sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/core/Core",
 	"sap/m/MessageToast",
-	"sap/ui/core/date/Gregorian",
+	"sap/ui/core/date/Gregorian", // ensure it's included in sap-ui-custom
 	"./ComponentLoader", // ensure it's included in sap-ui-custom
 	"./model/models",
 	"./model/formatter",
 ], function (UIComponent, Core, MessageToast, Gregorian, ComponentLoader, models, formatter) {
 	"use strict";
+
+	const PATH_DUTY_CONTACT = "https://gruene-ueberherrn.github.io/ueberherrn-app-data/dutyContact.json";
+	const PATH_DUTY_CYCLE = "https://gruene-ueberherrn.github.io/ueberherrn-app-data/dutyCycle.json";
+	const PATH_IMPORTANT_NUMBERS = "https://gruene-ueberherrn.github.io/ueberherrn-app-data/importantNumbers.json";
+	const PATH_HOTELS = "https://gruene-ueberherrn.github.io/ueberherrn-app-data/hotels.json";
+
+	// const PATH_DUTY_CONTACT = "/data/dutyContact.json";
+	// const PATH_DUTY_CYCLE = "/data/dutyCycle.json";
+	// const PATH_IMPORTANT_NUMBERS = "/data/importantNumbers.json";
+	// const PATH_HOTELS = "/data/hotels.json";
 
 	return UIComponent.extend("gruene.ueberherrn.Component", {
 
@@ -99,8 +109,8 @@ sap.ui.define([
 					dutyCycle: []
 				};
 				Promise.all([
-					this.requestGet("https://gruene-ueberherrn.github.io/ueberherrn-app-data/dutyContact.json"),
-					this.requestGet("https://gruene-ueberherrn.github.io/ueberherrn-app-data/dutyCycle.json")
+					this.requestGet(PATH_DUTY_CONTACT),
+					this.requestGet(PATH_DUTY_CYCLE)
 				]).then((aResult) => {
 					oStandByDutyData.dutyContact = JSON.parse(aResult[0]);
 					oStandByDutyData.dutyCycle = JSON.parse(aResult[1]);
@@ -111,7 +121,7 @@ sap.ui.define([
 
 		_getNumbersData: function () {
 			return new Promise((fnResolve, fnReject) => {
-				this.requestGet("https://gruene-ueberherrn.github.io/ueberherrn-app-data/importantNumbers.json").then((sImportantNumbers) => {
+				this.requestGet(PATH_IMPORTANT_NUMBERS).then((sImportantNumbers) => {
 					fnResolve(JSON.parse(sImportantNumbers));
 				}, () => fnReject([]));
 			});
@@ -119,7 +129,7 @@ sap.ui.define([
 
 		_getHotelsData: function () {
 			return new Promise((fnResolve, fnReject) => {
-				this.requestGet("https://gruene-ueberherrn.github.io/ueberherrn-app-data/hotels.json").then((sHotels) => {
+				this.requestGet(PATH_HOTELS).then((sHotels) => {
 					fnResolve(JSON.parse(sHotels));
 				}, () => fnReject([]));
 			});

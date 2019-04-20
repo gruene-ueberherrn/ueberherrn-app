@@ -6,9 +6,9 @@
 			"path": "/data",
 			"target": {
 				"type": "application",
-				"name": "grueneueberherrndata"
+				"name": "ueberherrnappdata"
 			},
-			"description": "Gruene Ueberherrn Data"
+			"description": "Ueberherrn App Data"
 		}
 	]
 }
